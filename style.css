@@ -1,0 +1,263 @@
+@charset "UTF-08";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+  --colorMain-footer: #343193;
+  --colorSection-form-border: #b52184;
+  --font: "Mulish", sans-serif;
+}
+
+body {
+  height: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header img {
+  width: 100%;
+  height: auto;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: var(--colorMain-footer);
+}
+
+/* INICIO DOS CARDS*/
+.cards {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+}
+
+.cards div {
+  flex: 1;
+}
+
+.cards img {
+  width: 100%;
+  height: auto;
+}
+/*FIM DOS CARDS*/
+
+/* INICIO DO FORMULÁRIO */
+form > fieldset{
+  border: none;
+}
+
+.my-form {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 5rem;
+  padding: 2rem;
+ 
+}
+
+form img {
+  width: 40%;
+}
+
+.inputs-form {
+  display: flex;
+  flex-direction: column; 
+}
+
+.inputs-form {
+  display: flex;
+  flex-direction: column;
+  padding-right: 3rem;
+  gap: 10px;
+  
+}
+
+/* INICIO INPUT NAME */
+.input-name {
+  display: flex;
+  position: relative;
+  width: 54.2rem;
+  height: 4.8rem;
+  padding-left: 2rem;
+}
+
+.input-name i {
+  position: absolute;
+  left: 3rem;
+  align-items: center;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.9rem;
+}
+
+.input-name input {
+  width: 100%;
+  padding: 10px 10px 10px 35px;
+  border: 0.2rem solid var(--colorSection-form-border);
+  border-radius: 1.6rem;
+  outline: none;
+}
+/* FIM DO INPUT NAME */
+
+/* INICIO DO INPUT E-MAIL */
+.input-email {
+  display: flex;
+  position: relative;
+  width: 54.2rem;
+  height: 4.8rem;
+  padding-left: 2rem;
+}
+
+.input-email i {
+  position: absolute;
+  left: 3rem;
+  align-items: center;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.9rem;
+}
+
+.input-email input {
+  width: 100%;
+  padding: 10px 10px 10px 35px;
+  border: 0.2rem solid var(--colorSection-form-border);
+  border-radius: 1.6rem;
+  outline: none;
+}
+/* FIM DO INPUT E-MAIL */
+
+/* INICIO DO INPUT TEXT AREA */
+.input-textarea {
+  display: flex;
+  position: relative;
+  width: 54.2rem;
+  height: 4.8rem;
+  padding-left: 2rem;
+}
+
+.input-textarea input {
+  width: 59.2rem;
+  height: 12.6rem;
+  padding: 10px 10px 10px 35px;
+  border: 0.2rem solid var(--colorSection-form-border);
+  border-radius: 1.6rem;
+  outline: none;
+}
+/* FIM DO INPUT TEXT AREA */
+
+/* INICIO DO INPUT BUTTON */
+.input-button {
+  padding: 80px 20px 0;
+  margin: 0;
+}
+
+.input-button input {
+  font-family: var(--font);
+  font-weight: bold;
+  font-size: 1.4rem;
+  width: 15rem;
+  height: 4rem;
+  position: relative;
+  border-radius: 1.6rem;
+  background-color: var(--colorMain-footer);
+  color: white;
+  cursor: pointer;
+  background: linear-gradient(to right, var(--colorMain-footer), var(--colorSection-form-border));
+  background-size: 200% 100%;
+  background-position: left bottom;
+  transition: background-position 0.5s ease;
+}
+
+.input-button input:hover {
+  background-color: var(--colorSection-form-border);
+  color: black;
+  background-position: right bottom;
+}
+
+legend {
+  margin-top: 3rem;
+  margin-bottom: 5rem;
+  padding-left: 10rem;
+  font-family: var(--font);
+  font-size: 4.2rem;
+  font-weight: 900;
+  color: var(--colorSection-form);
+}
+
+
+footer {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  width: 100%;
+  bottom: 0;
+  position: relative;
+  background-color: var(--colorMain-footer);
+}
+
+footer > p {
+  font-size: 1.6rem;
+}
+
+
+/* Responsividade para telas pequenas (smartphones e tablets) */
+@media screen and (max-width: 768px) {
+  :root {
+    font-size: 50%;
+  }
+
+  main {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+
+  .cards {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+
+  }
+
+  .my-form {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  form img {
+    width: 100%;
+    display: none;
+  }
+
+  .input-name, .input-email, .input-textarea {
+    width: 100%;
+  }
+
+  .input-textarea input {
+    width: 100%;
+  }
+
+  .input-button {
+    padding: 8rem 2rem 0;
+  }
+
+  legend {
+    padding-left: 2rem;
+    text-align: center;
+    font-size: 3.5rem;
+  }
+}
+
+/* AQUI A IMAGEM DO FORMULARIO SOME QUANDO CHEGAR NAS TELAS MENORES */
+@media (max-width: 430px) {
+  header > img {
+    content: url(imgs/Frame\ 12.png);
+  }
+}
